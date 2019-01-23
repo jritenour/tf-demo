@@ -50,6 +50,8 @@ resource "azurerm_storage_account" "storage_account1" {
   resource_group_name = "${azurerm_resource_group.resource_group.name}"
   location            = "${var.resource_group_location}"
   account_type        = "${var.config["storage_account_type"]}"
+  account_tier        = "Standard"
+  account_replication_type = "LRS"
 }
 
 # Need a storage container until managed disks supported by terraform provider
