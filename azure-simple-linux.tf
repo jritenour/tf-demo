@@ -49,7 +49,7 @@ resource "azurerm_storage_account" "storage_account1" {
   name                = "${random_id.storage_account_name.hex}"
   resource_group_name = "${azurerm_resource_group.resource_group.name}"
   location            = "${var.resource_group_location}"
-  account_type        = "${var.config["storage_account_type"]}"
+#  account_type        = "${var.config["storage_account_type"]}"
   account_tier        = "Standard"
   account_replication_type = "LRS"
 }
@@ -66,7 +66,7 @@ resource "azurerm_public_ip" "public_ip1" {
   name                         = "${var.config["public_ip_address_name"]}"
   location                     = "${var.resource_group_location}"
   resource_group_name          = "${azurerm_resource_group.resource_group.name}"
-  public_ip_address_allocation = "${var.config["public_ip_address_type"]}"
+  allocation_method = "${var.config["public_ip_address_type"]}"
   domain_name_label            = "${var.dns_label_prefix}"
 }
 
