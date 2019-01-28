@@ -102,7 +102,7 @@ resource "azurerm_virtual_machine" "virtual_machine1" {
   location              = "${var.resource_group_location}"
   resource_group_name   = "${azurerm_resource_group.resource_group.name}"
   network_interface_ids = ["${azurerm_network_interface.network_interface1.id}"]
-  vm_size               = "${var.config["vm_size"]}"
+  vm_size               = "${var.vm_size}"
 
   os_profile {
     computer_name  = "${var.vm_name}"
