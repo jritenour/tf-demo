@@ -14,6 +14,10 @@ variable "admin_password" {
   description = "Password for the Virtual Machine."
 }
 
+variable "vm_size" {
+  description = "Instance size"
+}
+
 variable "dns_label_prefix" {
   description = "Unique DNS Name for the Public IP used to access the Virtual Machine."
 }

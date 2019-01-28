@@ -105,7 +105,7 @@ resource "azurerm_virtual_machine" "virtual_machine1" {
   vm_size               = "${var.config["vm_size"]}"
 
   os_profile {
-    computer_name  = "${var.config["vm_name"]}"
+    computer_name  = "${var.vm_name}"
     admin_username = "${var.admin_username}"
     admin_password = "${var.admin_password}"
   }
@@ -148,6 +148,6 @@ resource "azurerm_virtual_machine" "virtual_machine1" {
 }
 
 #IPAdress value only available with static IP Address
-output "ipAddress" {
-  value = ["${azurerm_public_ip.public_ip1.ip_address}"]
+output "FQDN" {
+  value = ["${azurerm_public_ip.public_ip1.fqdn}"]
 }
