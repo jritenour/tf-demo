@@ -98,7 +98,7 @@ resource "azurerm_network_interface" "network_interface1" {
 }
 
 resource "azurerm_virtual_machine" "virtual_machine1" {
-  name                  = "${var.config["vm_name"]}"
+  name                  = "${var.vm_name}"
   location              = "${var.resource_group_location}"
   resource_group_name   = "${azurerm_resource_group.resource_group.name}"
   network_interface_ids = ["${azurerm_network_interface.network_interface1.id}"]

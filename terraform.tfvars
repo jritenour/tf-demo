@@ -4,6 +4,8 @@ admin_password = ""
 
 dns_label_prefix = "jrtfdemo1"
 
+vm_name = "jrtfdemo1"
+
 resource_group_location = "East US"
 
 resource_group_name = "jrazuretfdemo"

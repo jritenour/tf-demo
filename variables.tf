@@ -26,3 +26,8 @@ variable "admin_sshkey" {
   type        = "string"
   description = "SSH key for authentication to the Virtual Machines"
 }
+
+variable "vm_name" {
+  type	      = "string"
+  description = "Name for the VM object"
+}
